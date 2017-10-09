@@ -1,0 +1,15 @@
+﻿body { font-family: 'Segoe UI', Arial, Helvetica, sans-serif; font-size: 16px; }
+
+#stockTable .loading td { text-align: left; }
+
+#marquee { overflow: hidden; width: 665px; height: 24px; border: 1px solid #999; }
+
+    #marquee .inner { width: 9999px; }
+
+    #marquee ul { display: inline-block; list-style-type: none; margin: 0; padding: 0; }
+
+    #marquee li { display: inline-block; margin-right: 8px; }
+
+    #marquee .symbol { font-weight: bold; }
+
+    #marquee .change { font-style: italic; }

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Streaming Stock Table</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="~/Content/StockPulser.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="marquee">
+        <div class="inner">
+            <ul>
+                <li class="loading">loading...</li>
+            </ul>
+        </div>
+    </div>
+
+    <h1 style="margin-top:50px">Streaming Stock Table</h1>    
+
+    <div id="stockTable">
+        <table class="table">
+            <thead>
+                <tr><th>Symbol</th><th>Price</th><th>Open</th><th>High</th><th>Low</th><th>Change</th><th>Last Change</th><th>%</th></tr>
+            </thead>
+            <tbody>
+                <tr class="loading"><td colspan="7">loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <input type="button" id="startPulsing" value="Start Streaming" />
+    <input type="button" id="stopPulsing" value="Stop Streaming" disabled="disabled" />
+    <input type="button" id="reset" value="Reset" />
+  
+    <script src="~/Scripts/jquery-1.6.4.js"></script>
+    <script src="~/Scripts/jquery.color-2.1.2.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.2.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/StockPulser.js"></script>
+</body>
+</html>
